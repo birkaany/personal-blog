@@ -1,12 +1,15 @@
-import "./App.css";
-import Header from "./components/Header";
+import React from "react";
 
-function App() {
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import HeroSection from "./components/HeroSection";
+
+export default function App() {
   return (
-    <div className="App bg-primary-gray font-mainFont">
+    <>
       <Header />
-    </div>
+      <HeroSection />
+      <Footer />
+    </>
   );
 }
-
-export default App;
