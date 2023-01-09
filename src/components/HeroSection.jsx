@@ -1,4 +1,5 @@
 import React from "react";
+
 export default function HeroSection() {
   return (
     <section id="hero-section" className="container mx-auto border-b">
@@ -10,6 +11,7 @@ export default function HeroSection() {
         <ul className="flex gap-5">
           <li className="navbar-item">Articles</li>
           <li className="navbar-item">Projects</li>
+          <li className="navbar-item">Contact</li>
         </ul>
       </nav>
     </section>
