@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   return (
@@ -9,9 +10,15 @@ export default function HeroSection() {
       </div>
       <nav>
         <ul className="flex gap-5">
-          <li className="navbar-item">Articles</li>
-          <li className="navbar-item">Projects</li>
-          <li className="navbar-item">Contact</li>
+          <li className="navbar-item">
+            <Link to="/">Articles</Link>
+          </li>
+          <li className="navbar-item">
+            <Link to="/projects">Projects</Link>
+          </li>
+          <li className="navbar-item">
+            <Link to="/contact">Contact</Link>
+          </li>
         </ul>
       </nav>
     </section>
