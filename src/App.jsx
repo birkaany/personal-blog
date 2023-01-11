@@ -7,6 +7,7 @@ import HeroSection from "./components/HeroSection";
 import PostList from "./components/PostList";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import Post from "./components/Post";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/" element={<PostList />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/post" element={<Post />} />
       </Routes>
 
       <Footer />
