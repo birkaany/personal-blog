@@ -12,4 +12,8 @@
   .post {
     @apply max-w-3xl flex flex-col py-12 border-b gap-3;
   }
+
+  h2 {
+    @apply text-2xl;
+  }
 }

@@ -1,23 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 
 export default function PostList() {
+  const [postData, setPostData] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    const res = await fetch("http://localhost:1337/api/posts");
+    const data = await res.json();
+    setPostData(data);
+  };
+
   return (
     <section id="postList">
       <ul className="container mx-auto">
-        <li className="post summary">
-          <Link to="/post">
-            <h2 className=" text-by-black-800 text-3xl font-bold">Post Title</h2>
-          </Link>
-
-          <time className="text-by-gray-400 font-bold uppercase text-sm tracking-wider">February 19, 2023</time>
-          <p className="text-by-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias vero molestiae explicabo quo odit unde assumenda asperiores veniam libero animi.</p>
-        </li>
-        <li className="post summary">
-          <h2 className=" text-by-black-800 text-3xl font-bold">Post Title</h2>
-          <time className="text-by-gray-400 font-bold uppercase text-sm tracking-wider">February 19, 2023</time>
-          <p className="text-by-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias vero molestiae explicabo quo odit unde assumenda asperiores veniam libero animi.</p>
-        </li>
+        {postData?.data?.map((post) => (
+          <li key={post.id} className="post summary">
+            <Link to="/post">
+              <h2 className=" text-by-black-800 text-3xl font-bold">{post.attributes.title}</h2>
+            </Link>
+            <time className="text-by-gray-400 font-bold uppercase text-sm tracking-wider">{post.attributes.publishedAt}</time>
+            <ReactMarkdown>{post.attributes.content}</ReactMarkdown>
+          </li>
+        ))}
       </ul>
     </section>
   );
