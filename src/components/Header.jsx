@@ -1,4 +1,5 @@
 import React from "react";
+
 import profilePic from "/src/assets/profile.jpg";
 import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 

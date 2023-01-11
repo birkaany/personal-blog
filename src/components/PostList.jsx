@@ -2,25 +2,13 @@ import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 
-export default function PostList() {
-  const [postData, setPostData] = useState([]);
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    const res = await fetch("http://localhost:1337/api/posts");
-    const data = await res.json();
-    setPostData(data);
-  };
-
+export default function PostList({ data }) {
   return (
     <section id="postList">
       <ul className="container mx-auto">
-        {postData?.data?.map((post) => (
+        {data?.data?.map((post) => (
           <li key={post.id} className="post summary">
-            <Link to="/post">
+            <Link to={`/post/${post.id}`}>
               <h2 className=" text-by-black-800 text-3xl font-bold">{post.attributes.title}</h2>
             </Link>
             <time className="text-by-gray-400 font-bold uppercase text-sm tracking-wider">{post.attributes.publishedAt}</time>
