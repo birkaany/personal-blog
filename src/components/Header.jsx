@@ -2,6 +2,7 @@ import React from "react";
 
 import profilePic from "/src/assets/profile.jpg";
 import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function SocialLink(props) {
   return (
@@ -13,9 +14,11 @@ function SocialLink(props) {
 
 export default function Header() {
   return (
-    <header className="container mx-auto py-6 flex justify-between items-center border-b">
+    <header className="py-6 flex justify-between items-center border-b">
       <div className="logo flex gap-3 items-center">
-        <img src={profilePic} alt="" className="rounded-full max-w-[4rem]" />
+        <Link to="/">
+          <img src={profilePic} alt="" className="rounded-full max-w-[4rem]" />
+        </Link>
         <h2 className="flex flex-col font-bold text-xl">
           Birkan Yılmaz
           <span className="font-normal text-by-gray-400 text-sm ">Frontend Developer</span>

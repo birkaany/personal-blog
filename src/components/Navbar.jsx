@@ -1,18 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <nav>
       <ul className="flex gap-5">
-        <li className="navbar-item">
-          <Link to="/">Articles</Link>
+        <li className="navbar-item active">
+          <NavLink activeClassName="active" to="/">
+            Articles
+          </NavLink>
         </li>
         <li className="navbar-item">
-          <Link to="/projects">Projects</Link>
+          <NavLink to="/projects">Projects</NavLink>
         </li>
         <li className="navbar-item">
-          <Link to="/contact">Contact</Link>
+          <NavLink to="/contact">Contact</NavLink>
         </li>
       </ul>
     </nav>

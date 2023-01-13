@@ -4,7 +4,7 @@ import LayoutProvider from "../hooks/useLayout";
 export default function Contact() {
   return (
     <LayoutProvider>
-      <h1>Contact Page</h1>
+      <h1>Contact</h1>
     </LayoutProvider>
   );
 }

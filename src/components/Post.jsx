@@ -21,7 +21,7 @@ export default function Post() {
   return (
     <LayoutProvider>
       <article>
-        <div className="post container mx-auto">
+        <div className="post">
           <h1 className="text-by-black-800 text-3xl font-bold">{postData?.attributes?.title}</h1>
           <time className="text-by-gray-400 font-bold uppercase text-sm tracking-wider">{postData?.attributes?.publishedAt}</time>
 
