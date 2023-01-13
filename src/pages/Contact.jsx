@@ -1,5 +1,10 @@
 import React from "react";
+import LayoutProvider from "../hooks/useLayout";
 
 export default function Contact() {
-  return <h1>Contact Page</h1>;
+  return (
+    <LayoutProvider>
+      <h1>Contact Page</h1>
+    </LayoutProvider>
+  );
 }

@@ -2,13 +2,9 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import HeroSection from "./components/HeroSection";
-import PostList from "./components/PostList";
-import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
-import Post from "./components/Post";
+import { HeroSection, PostList, Projects, Contact, Post } from "./components";
+import Layout from "./components/Layout/Layout";
+import Navbar from "./components/Navbar";
 
 export default function App() {
   const [postData, setPostData] = useState([]);
@@ -24,17 +20,12 @@ export default function App() {
   };
   return (
     <>
-      <Header />
-      <HeroSection />
-
       <Routes>
         <Route path="/" element={<PostList data={postData} />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/post/:postId" element={<Post data={postData} />} />
+        <Route path="/post/:postId" element={<Post />} />
       </Routes>
-
-      <Footer />
     </>
   );
 }

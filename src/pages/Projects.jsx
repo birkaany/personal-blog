@@ -1,4 +1,9 @@
 import React from "react";
+import LayoutProvider from "../hooks/useLayout";
 export default function Projects() {
-  return <h1>Proje sayfası</h1>;
+  return (
+    <LayoutProvider>
+      <div>Project Page</div>
+    </LayoutProvider>
+  );
 }
