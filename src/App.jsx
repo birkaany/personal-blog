@@ -18,7 +18,6 @@ export default function App() {
   };
   return (
     <>
-      <div></div>
       <Routes>
         <Route path="/" element={<PostList data={postData} />} />
         <Route path="/projects" element={<Projects />} />

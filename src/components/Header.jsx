@@ -1,8 +1,8 @@
 import React from "react";
 
 import profilePic from "/src/assets/profile.jpg";
-import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import Icon from "./Icon";
 
 function SocialLink(props) {
   return (
@@ -27,17 +27,17 @@ export default function Header() {
       <ul className="social-media flex gap-3 text-by-gray-400">
         <li>
           <SocialLink link="https://github.com/birkaany/">
-            <BsGithub />
+            <Icon icon="logo-github" size={20} />
           </SocialLink>
         </li>
         <li>
           <SocialLink link="https://www.linkedin.com/in/birkan-yilmaz/">
-            <BsLinkedin />
+            <Icon icon="logo-linkedin" size={20} />
           </SocialLink>
         </li>
         <li>
           <SocialLink link="https://twitter.com/adimcikmis9a">
-            <BsTwitter />
+            <Icon icon="logo-twitter" size={20} />
           </SocialLink>
         </li>
       </ul>
