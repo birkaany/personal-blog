@@ -6,7 +6,7 @@ export default function Navbar() {
     <nav>
       <ul className="flex gap-5">
         <li className="navbar-item active">
-          <NavLink activeClassName="active" to="/">
+          <NavLink activeclassname="active" to="/">
             Articles
           </NavLink>
         </li>

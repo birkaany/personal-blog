@@ -2,9 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 
-import { HeroSection, PostList, Projects, Contact, Post } from "./components";
-import Layout from "./components/Layout/Layout";
-import Navbar from "./components/Navbar";
+import { PostList, Projects, Contact, Post } from "./components";
 
 export default function App() {
   const [postData, setPostData] = useState([]);
@@ -14,7 +12,7 @@ export default function App() {
   }, []);
 
   const fetchData = async () => {
-    const res = await fetch("http://localhost:1337/api/posts");
+    const res = await fetch("http://localhost:1337/api/posts?sort[0]=id:desc");
     const data = await res.json();
     setPostData(data);
   };

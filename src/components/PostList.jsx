@@ -15,7 +15,7 @@ export default function PostList({ data }) {
                 <h2 className=" text-by-black-800 text-3xl font-bold">{post.attributes.title}</h2>
               </Link>
               <time className="text-by-gray-400 font-bold uppercase text-sm tracking-wider">{post.attributes.publishedAt}</time>
-              <ReactMarkdown>{post.attributes.content}</ReactMarkdown>
+              <ReactMarkdown className=" line-clamp-4">{post.attributes.content}</ReactMarkdown>
             </li>
           ))}
         </ul>
