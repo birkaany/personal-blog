@@ -24,3 +24,8 @@
     @apply text-2xl;
   }
 }
+
+@layer utilities {
+  .post-excerpt {
+  }
+}
