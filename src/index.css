@@ -7,7 +7,7 @@
     @apply font-mainFont;
   }
   .navbar-item {
-    @apply py-3 px-1;
+    @apply py-3;
   }
   .navbar-item a {
     @apply text-sm text-by-gray-400 uppercase font-semibold tracking-wider  py-3 px-1 border-b-2 border-transparent  hover:border-yellow-400;
@@ -21,6 +21,12 @@
   }
 
   h2 {
-    @apply text-2xl;
+    @apply text-by-black-800 text-3xl font-bold;
+  }
+}
+
+@layer utilities {
+  .project-button {
+    @apply flex text-sm gap-2 w-28 justify-center items-center px-3 py-1 border cursor-pointer border-yellow-400 hover:bg-yellow-400 transition-all duration-200;
   }
 }
