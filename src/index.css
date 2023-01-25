@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply overflow-y-scroll;
+  }
   body {
     @apply font-mainFont;
   }
