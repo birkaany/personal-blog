@@ -24,6 +24,7 @@ export default function Projects() {
             {
               return (
                 <ProjectCard
+                  id={project.id}
                   key={project.id}
                   name={project.attributes.projectName}
                   content={project.attributes.projectContent}
