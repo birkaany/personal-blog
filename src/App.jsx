@@ -8,15 +8,6 @@ import Project from "./components/Project";
 export default function App() {
   const [postData, setPostData] = useState([]);
 
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    const res = await fetch("http://localhost:1337/api/posts?sort[0]=id:desc");
-    const data = await res.json();
-    setPostData(data);
-  };
   return (
     <>
       <Routes>

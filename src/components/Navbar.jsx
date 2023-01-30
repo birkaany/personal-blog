@@ -13,9 +13,6 @@ export default function Navbar() {
         <li className="navbar-item">
           <NavLink to="/projects">Projects</NavLink>
         </li>
-        {/* <li className="navbar-item">
-          <NavLink to="/contact">Contact</NavLink>
-        </li> */}
       </ul>
     </nav>
   );

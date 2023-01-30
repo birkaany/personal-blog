@@ -1,32 +1,29 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 import LayoutProvider from "../hooks/useLayout";
-import ReactMarkdown from "react-markdown";
+import { useState, useEffect } from "react";
 import Icon from "./Icon";
+import { useParams } from "react-router-dom";
+import client from "../data/client";
 
 export default function Project() {
-  let { projectId } = useParams();
   const [projectData, setProjectData] = useState([]);
+  const { projectId } = useParams();
 
   useEffect(() => {
     fetchData();
   }, []);
 
-  const fetchData = async () => {
-    const res = await fetch(`http://localhost:1337/api/projects/${projectId}`);
-    const data = await res.json();
-    setProjectData(data.data);
-  };
+  async function fetchData() {
+    const { data } = await client.items().type("project").equalsFilter("system.id", projectId).toPromise();
+    setProjectData(data.items);
+  }
 
   return (
     <LayoutProvider>
       <article>
         <div className="post">
-          <h1 className="text-by-black-800 text-3xl font-bold">{projectData?.attributes?.projectName}</h1>
-          <time className="text-by-gray-400 font-bold uppercase text-sm tracking-wider">{projectData?.attributes?.publishedAt}</time>
-
-          <ReactMarkdown>{projectData?.attributes?.projectContent}</ReactMarkdown>
+          <h1 className="text-by-black-800 text-3xl font-bold">{projectData[0]?.elements.project_title.value}</h1>
+          <div dangerouslySetInnerHTML={{ __html: projectData[0]?.elements.project_content.value }}></div>
           <button className="project-button">
             Details
             <span>

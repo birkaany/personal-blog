@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@kontent-ai/delivery-sdk": "^12.4.2",
     "@tailwindcss/line-clamp": "^0.4.2",
     "autoprefixer": "^10.4.13",
     "react": "^18.2.0",

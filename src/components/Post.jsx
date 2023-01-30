@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import LayoutProvider from "../hooks/useLayout";
+import client from "../data/client";
 
 export default function Post() {
   let { postId } = useParams();
@@ -13,19 +14,18 @@ export default function Post() {
   }, []);
 
   const fetchData = async () => {
-    const res = await fetch(`http://localhost:1337/api/posts/${postId}`);
-    const data = await res.json();
-    setPostData(data.data);
+    const { data } = await client.items().type("post").equalsFilter("system.id", postId).toPromise();
+    setPostData(data.items);
   };
 
   return (
     <LayoutProvider>
       <article>
         <div className="post">
-          <h1 className="text-by-black-800 text-3xl font-bold">{postData?.attributes?.title}</h1>
+          <h1 className="text-by-black-800 text-3xl font-bold">{postData[0]?.elements.post_title.value}</h1>
           <time className="text-by-gray-400 font-bold uppercase text-sm tracking-wider">{postData?.attributes?.publishedAt}</time>
 
-          <ReactMarkdown>{postData?.attributes?.content}</ReactMarkdown>
+          <div dangerouslySetInnerHTML={{ __html: postData[0]?.elements.post_content.value }}></div>
         </div>
       </article>
     </LayoutProvider>
