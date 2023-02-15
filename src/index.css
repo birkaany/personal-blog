@@ -23,8 +23,15 @@
     @apply max-w-3xl flex flex-col py-12 border-b gap-3;
   }
 
+  h1 {
+    @apply text-by-black-800 text-4xl font-bold mb-6;
+  }
   h2 {
-    @apply text-by-black-800 text-3xl font-bold;
+    @apply text-by-black-800 text-3xl font-bold mt-6;
+  }
+
+  p:has(code) {
+    @apply text-xs bg-gray-300;
   }
 }
 
