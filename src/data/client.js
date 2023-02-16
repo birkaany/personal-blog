@@ -1,6 +1,6 @@
 import { createDeliveryClient } from "@kontent-ai/delivery-sdk";
 const client = createDeliveryClient({
-  projectId: process.env.PROJECT_ID,
+  projectId: import.meta.env.VITE_PROJECT_ID,
 });
 
 export default client;

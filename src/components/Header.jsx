@@ -20,7 +20,7 @@ export default function Header() {
           <img src={profilePic} alt="" className="rounded-full max-w-[4rem]" />
         </Link>
         <h2 className="flex flex-col font-bold text-xl">
-          Birkan Yılmaz
+          Birkan Yılmaz {import.meta?.env?.REACT_APP_PROJECT_ID}
           <span className="font-normal text-by-gray-400 text-sm ">Frontend Developer</span>
         </h2>
       </div>
