@@ -11,6 +11,7 @@
   "dependencies": {
     "@kontent-ai/delivery-sdk": "^12.4.2",
     "@tailwindcss/line-clamp": "^0.4.2",
+    "@vercel/analytics": "^0.1.9",
     "autoprefixer": "^10.4.13",
     "dotenv": "^16.0.3",
     "prismjs": "^1.29.0",
