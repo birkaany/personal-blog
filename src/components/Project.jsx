@@ -46,13 +46,20 @@ export default function Project() {
           <h1 className="text-by-black-800 text-3xl font-bold">{projectData[0]?.elements.project_title.value}</h1>
 
           <div dangerouslySetInnerHTML={{ __html: projectData[0]?.elements.project_content.value }} ref={codeRef}></div>
-
-          <button className="project-button">
-            Details
-            <span>
-              <Icon icon="arrow-right" size={15} />
-            </span>
-          </button>
+          <div className="project-buttons flex gap-5">
+            <a href={projectData[0]?.elements.project_github_link.value} target="_blank" className="project-button">
+              Github
+              <span>
+                <Icon icon="logo-github" size={15} />
+              </span>
+            </a>
+            <a href={projectData[0]?.elements.project_live_demo_link.value} target="_blank" className="project-button">
+              Live
+              <span>
+                <Icon icon="connection-signal" size={15} />
+              </span>
+            </a>
+          </div>
         </div>
       </article>
     </LayoutProvider>

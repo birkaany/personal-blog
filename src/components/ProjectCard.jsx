@@ -15,16 +15,11 @@ export default function ProjectCard({ project }) {
 
   return (
     <li className="flex flex-col gap-3 border-b py-6">
-      <h2>{name}</h2>
+      <Link to={`/projects/${id}`}>
+        <h2 className="hover:text-yellow-400 transition-all">{name}</h2>
+      </Link>
       <div className="line-clamp-4" dangerouslySetInnerHTML={{ __html: content }}></div>
-      <div className="project-buttons flex gap-3 my-3">
-        <Link to={`/projects/${id}`} className="project-button">
-          Details
-          <span>
-            <Icon icon="arrow-right" size={15} />
-          </span>
-        </Link>
-      </div>
+      <div className="project-buttons flex gap-3 my-3"></div>
     </li>
   );
 }

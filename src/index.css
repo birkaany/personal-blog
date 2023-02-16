@@ -29,9 +29,11 @@
   h2 {
     @apply text-by-black-800 text-3xl font-bold mt-6;
   }
-
-  p:has(code) {
-    @apply text-xs bg-gray-300;
+  pre {
+    @apply mb-6;
+  }
+  p {
+    @apply mb-3;
   }
 }
 

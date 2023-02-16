@@ -7,11 +7,11 @@ export default function Navbar() {
       <ul className="flex gap-5">
         <li className="navbar-item active">
           <NavLink activeclassname="active" to="/">
-            Articles
+            Yazılarım
           </NavLink>
         </li>
         <li className="navbar-item">
-          <NavLink to="/projects">Projects</NavLink>
+          <NavLink to="/projects">Projelerim</NavLink>
         </li>
       </ul>
     </nav>

@@ -23,7 +23,7 @@ export default function PostList() {
           {postData?.map((post) => (
             <li key={post.system.id} className="post summary">
               <Link to={`/post/${post.system.id}`}>
-                <h2 className=" hover:text-yellow-400 transition-all">{post?.elements.post_title.value}</h2>
+                <h2 className="hover:text-yellow-400 transition-all">{post?.elements.post_title.value}</h2>
               </Link>
               <time className="text-by-gray-400 font-bold uppercase text-sm tracking-wider"></time>
               <div className="line-clamp-4" dangerouslySetInnerHTML={{ __html: post?.elements.post_content.value }}></div>
