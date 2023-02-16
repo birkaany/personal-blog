@@ -5,7 +5,8 @@ import Icon from "./Icon";
 import { useParams } from "react-router-dom";
 import client from "../data/client";
 import Prism from "prismjs";
-import "/public/prism-duotone.css";
+/* import "/public/prism-duotone.css"; */
+import "prismjs/themes/prism-funky.css";
 
 export default function Project() {
   const [projectData, setProjectData] = useState([]);
