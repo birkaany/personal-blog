@@ -44,8 +44,6 @@ export default function Project() {
       <article>
         <div className="post">
           <h1 className="text-by-black-800 text-3xl font-bold">{projectData[0]?.elements.project_title.value}</h1>
-
-          <div dangerouslySetInnerHTML={{ __html: projectData[0]?.elements.project_content.value }} ref={codeRef}></div>
           <div className="project-buttons flex gap-5">
             <a href={projectData[0]?.elements.project_github_link.value} target="_blank" className="project-button">
               Github
@@ -60,6 +58,8 @@ export default function Project() {
               </span>
             </a>
           </div>
+
+          <div dangerouslySetInnerHTML={{ __html: projectData[0]?.elements.project_content.value }} ref={codeRef}></div>
         </div>
       </article>
     </LayoutProvider>

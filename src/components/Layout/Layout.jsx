@@ -5,7 +5,7 @@ import Navbar from "../Navbar";
 
 const Layout = ({ children }) => {
   return (
-    <main className="container mx-auto">
+    <main className="container mx-auto px-6 md:px-0">
       <Header />
       <Navbar />
       <div>{children}</div>
