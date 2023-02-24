@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { BlogDate } from "./BlogDate";
 
 import LayoutProvider from "../hooks/useLayout";
 import client from "../data/client";
@@ -23,7 +24,7 @@ export default function Post() {
       <article>
         <div className="post">
           <h1 className="text-by-black-800 text-3xl font-bold">{postData[0]?.elements.post_title.value}</h1>
-
+          <BlogDate isoDate={postData[0]?.system.lastModified} />
           <div dangerouslySetInnerHTML={{ __html: postData[0]?.elements.post_content.value }}></div>
         </div>
       </article>

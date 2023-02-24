@@ -1,5 +1,4 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import { PostList, Projects, Contact, Post } from "./components";
