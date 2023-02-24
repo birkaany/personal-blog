@@ -1,5 +1,4 @@
 import React from "react";
-import Icon from "./Icon";
 import { Link } from "react-router-dom";
 
 export default function ProjectCard({ project }) {
@@ -7,8 +6,6 @@ export default function ProjectCard({ project }) {
     elements: {
       project_title: { value: name },
       project_content: { value: content },
-      project_github_link: { value: project_github },
-      project_live_demo_link: { value: livedemo },
     },
     system: { id },
   } = project;

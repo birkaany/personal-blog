@@ -1,11 +1,11 @@
 import React from "react";
 import LayoutProvider from "../hooks/useLayout";
 import { useState, useEffect, useRef } from "react";
-import Icon from "./Icon";
 import { useParams } from "react-router-dom";
-import client from "../data/client";
+import Icon from "./Icon";
 import Prism from "prismjs";
 import "/public/prism-duotone.css";
+import client from "../data/client";
 
 export default function Project() {
   const [projectData, setProjectData] = useState([]);

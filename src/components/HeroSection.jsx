@@ -1,7 +1,6 @@
 import React from "react";
-import Navbar from "./Navbar";
 
-export default function HeroSection(props) {
+export default function HeroSection() {
   return (
     <section id="hero-section" className="border-b">
       {
