@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import ReactMarkdown from "react-markdown";
+
 import LayoutProvider from "../hooks/useLayout";
 import client from "../data/client";
 
@@ -23,7 +23,6 @@ export default function Post() {
       <article>
         <div className="post">
           <h1 className="text-by-black-800 text-3xl font-bold">{postData[0]?.elements.post_title.value}</h1>
-          <time className="text-by-gray-400 font-bold uppercase text-sm tracking-wider">{postData?.attributes?.publishedAt}</time>
 
           <div dangerouslySetInnerHTML={{ __html: postData[0]?.elements.post_content.value }}></div>
         </div>

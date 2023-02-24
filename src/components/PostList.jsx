@@ -1,4 +1,3 @@
-import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 import LayoutProvider from "../hooks/useLayout";
 import client from "../data/client";
